@@ -1,0 +1,5 @@
+{
+  "webapp": "/path/to/projects/webapp",
+  "api": "/path/to/projects/api",
+  "scratch": "/tmp/scratch"
+}
