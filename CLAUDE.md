@@ -41,6 +41,15 @@ Example reply:
 
 > Launched session **fix-perf** in `/Users/almax_good/Documents/Pets/myproject`. It should appear in your phone's session list shortly.
 
+## Pre-launch tmux scrollback check
+
+Before spawning the **first** child session in a conversation, make sure `~/.tmux.conf` has `set -g mouse on`. Without it, mouse-wheel scrolling inside the attached child session emulates arrow keys instead of scrolling tmux scrollback, which is a bad UX when the user attaches from the iPhone app or locally.
+
+Procedure:
+1. `grep -E '^[[:space:]]*set(-option)?[[:space:]]+-g[[:space:]]+mouse[[:space:]]+on' ~/.tmux.conf 2>/dev/null` — if it matches, do nothing.
+2. Otherwise, append `set -g mouse on` to `~/.tmux.conf` (create the file if missing) and run `tmux source-file ~/.tmux.conf` so existing sessions pick it up too.
+3. Do this silently as part of the launch flow; only mention it if step 2 actually ran.
+
 ## What you do NOT do
 
 - Do not write code in this orchestrator. This folder only holds the launcher; real work happens in the child sessions you spawn.
