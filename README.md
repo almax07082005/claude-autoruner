@@ -51,7 +51,7 @@ The script is invoked as `./claude-autorun.sh` from this folder. It is **not** s
 
 ## Usage
 
-All commands run from `/Users/almax_good/Documents/Pets/claude-autoruner`.
+All commands run from the `claude-autoruner` directory (wherever you cloned it).
 
 ### Manage folder aliases
 

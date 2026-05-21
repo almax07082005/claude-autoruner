@@ -39,7 +39,7 @@ After every successful launch, tell the user:
 
 Example reply:
 
-> Launched session **fix-perf** in `/Users/almax_good/Documents/Pets/myproject`. It should appear in your phone's session list shortly.
+> Launched session **fix-perf** in `~/projects/myproject`. It should appear in your phone's session list shortly.
 
 ## Pre-launch tmux scrollback check
 
